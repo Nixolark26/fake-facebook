@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p {
+  font-family: sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  /* overflow: hidden; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login__main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  /* justify-content: center; */
+  width: 100%;
+  height: 100%;
+
+  background: #efefef;
 }
 
-.App-link {
-  color: #61dafb;
+.login__main {
+  width: 396px;
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login__main-header {
+  text-align: center;
+  padding-top: 1.35rem;
+  width: 396px;
 }
+
+.login__main-header-title {
+  font-size: 3.8rem;
+  color: #1877f2;
+}
+
+.login__main-header-info1 {
+  padding-top: 0.7rem;
+  font-size: 1.5rem;
+  padding-bottom: 2.55rem;
+}
+
+.login__main-form {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background: #fff;
+  display: flex;
+  width: 396px;
+  flex-direction: column;
+  padding: 0.99rem 0.99rem 1.6rem 0.99rem;
+  align-items: center;
+  height: auto;
+}
+
+input {
+  padding: 1rem;
+  width: calc(100% - 2rem);
+  font-size: 1rem;
+  border: 1px solid #dcd;
+  border-radius: 6px;
+}
+
+input::placeholder {
+  color: #888;
+}
+
+input:focus {
+  outline: none;
+}
+
+.login__main-form-input-username {
+  margin-bottom: 0.75rem;
+}
+
+.login__main-form-input-password {
+  margin-bottom: 1rem;
+}
+
+.login__main-form-input-submit {
+  font-size: 1.4rem;
+  font-weight: 750;
+  color: #fff;
+  background: #1877f2;
+  padding: 0.65rem;
+  border: none;
+  width: 100%;
+}
+
+.login__main-form-a-forgotpassword {
+  margin-top: 0.85rem;
+  color: #1877f2;
+  text-decoration: none;
+  font-size: 0.925rem;
+  text-align: center;
+}
+
+.login__main-form hr {
+  margin-top: 1.275rem;
+  margin-bottom: 1.65rem;
+  width: 98%;
+  border: 1px solid #dfdfdf;
+}
+
+.login__main-form-button-createaccount {
+  padding: 0.85rem 1.1rem;
+  font-size: 1.1rem;
+  font-weight: 550;
+  border-radius: 6px;
+  color: #fff;
+  width: auto;
+  border: none;
+  background: #42b72a;
+}
+
+.login__main-container-info2 {
+  margin-top: 1.8rem;
+  font-size: 0.9em;
+  margin-bottom: 8.1rem;
+}
+
+.login__main-container-info2 a {
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+}
+
+/* 
+@media screen and (max-width: 1080px) {
+  .footer-div {
+    background: #000;
+  }
+
+} */
