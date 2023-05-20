@@ -11,7 +11,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  /* width: 100vw; */
   background: #efefef;
 }
 
@@ -85,7 +85,7 @@ input:focus {
   font-weight: 750;
   color: #fff;
   background: #1877f2;
-  padding: 0.65rem;
+  padding: 0.7rem;
   border: none;
   width: 100%;
 }
@@ -119,7 +119,7 @@ input:focus {
 .login__main-container-info2 {
   margin-top: 1.8rem;
   font-size: 0.9em;
-  margin-bottom: 8.1rem;
+  margin-bottom: 7.2rem;
 }
 
 .login__main-container-info2 a {
@@ -131,7 +131,7 @@ input:focus {
 @media screen and (min-width: 900px) {
   .login__main-container {
     display: flex;
-    min-height: 100vh;
+    min-height: 720px;
     justify-content: center;
   }
   .login__main {
@@ -143,7 +143,7 @@ input:focus {
   .login__main-header {
     text-align: start;
     margin-left: 1vw;
-    margin-bottom: 20vh;
+    margin-bottom: 200px;
   }
 
   .login__main-header p {
@@ -151,7 +151,7 @@ input:focus {
   }
 
   .login__main-container-info2 {
-    padding-bottom: 0;
+    margin-bottom: 3.8rem;
   }
 }
 

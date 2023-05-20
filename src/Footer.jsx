@@ -1,7 +1,15 @@
 import React from "react";
 import "./Footer.css";
+import Card from "./components/Card";
+import extras from "./data/extras";
+
+import { Link } from "react-router-dom";
 
 function Footer() {
+  const extraList = extras.map((e) => {
+    return <Card title={e.name} />;
+  });
+
   return (
     <div className="footer-div">
       <footer>
@@ -18,38 +26,10 @@ function Footer() {
           <li>日本語</li>
         </ul>
         <hr />
-        <ul className="footer__ul-about">
-          <li>Sign Up</li>
-          <li>Log In</li>
-          <li>Messenger</li>
-          <li>Facebook Lite</li>
-          <li>Watch</li>
-          <li>Places</li>
-          <li>Games</li>
-          <li>Marketplace</li>
-          <li>Meta Pay</li>
-          <li>Meta Store</li>
-          <li>Meta Quest</li>
-          <li>Instagram</li>
-          <li>Bulletin</li>
-          <li>Fundraisers</li>
-          <li>Services</li>
-          <li>Voting Information Center</li>
-          <li>Privacy Policy</li>
-          <li>Privacy Center</li>
-          <li>Groups</li>
-          <li>About</li>
-          <li>Create Ad</li>
-          <li>Create Page</li>
-          <li>Developers</li>
-          <li>Careers</li>
-          <li>Cookies</li>
-          <li>Ad choices</li>
-          <li>Terms</li>
-          <li>Help</li>
-          <li>Contact Uploading & Non-Users</li>
-        </ul>
-        <span>Meta © 2023</span>
+        <ul className="footer__ul-about">{extraList}</ul>
+        <Link to="https://www.facebook.com" id="copyright">
+          <span>Meta © 2023</span>
+        </Link>
       </footer>
     </div>
   );

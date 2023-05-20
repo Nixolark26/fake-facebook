@@ -2,17 +2,14 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
-  const [message, setMessage] = useState("");
-
   //scroll to the top
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   };
 
-  function login() {
-    alert("Login");
-  }
+  function login() {}
 
+  const [message, setMessage] = useState("");
   function createAccount(event) {
     // event.preventDefault();
     setMessage(event.target.value);

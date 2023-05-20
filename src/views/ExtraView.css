@@ -1,0 +1,24 @@
+#extra-view-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#extra-view-container div {
+  width: 400px;
+  background: #ddd;
+  padding: 20px;
+}
+
+div h1 {
+  padding-bottom: 10px;
+}
+
+div b {
+  word-wrap: break-word;
+  background: #efefef;
+  color: #000;
+}

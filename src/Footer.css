@@ -9,7 +9,7 @@
 footer {
   display: flex;
   flex-direction: column;
-  width: 75%;
+  width: 80%;
 }
 
 li {
@@ -39,7 +39,7 @@ span {
 
 footer hr {
   border: 1px solid #e4e1e1;
-  margin-bottom: 0.65rem;
+  margin-bottom: 0.5rem;
   width: 100%;
 }
 
@@ -47,5 +47,10 @@ footer hr {
   display: flex;
   list-style-type: none;
   flex-wrap: wrap;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+#copyright {
+  text-decoration: none;
+  margin-bottom: 1.2rem;
 }
