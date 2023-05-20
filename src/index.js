@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import extras from "./data/extras";
 import ExtraView from "./views/ExtraView";
+import Home from "./routes/home";
 
 const routes = [
   {
@@ -18,7 +19,7 @@ const routes = [
     ),
   },
   {
-    path: "/home",
+    path: "index",
     element: <Home />,
   },
 ];
