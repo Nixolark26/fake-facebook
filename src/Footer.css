@@ -12,7 +12,8 @@ footer {
   width: 80%;
 }
 
-span {
+footer,
+.footer__ul-languages span {
   font-size: 0.7rem;
   color: #555;
   margin-bottom: 1.25rem;
