@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
-import Card from "./components/Card";
-import extras from "./data/extras";
+import Card from "../../components/Card";
+import extras from "../../data/extras";
 
 import { Link } from "react-router-dom";
 

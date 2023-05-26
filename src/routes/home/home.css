@@ -104,6 +104,7 @@ header {
   justify-content: space-around;
   list-style-type: none;
   background: #fff;
+  background: greenyellow;
 }
 
 .left-nav__elements span {

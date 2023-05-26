@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useReducer } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import Footer from "./Footer";
+import Footer from "./routes/home/Footer";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import extras from "./data/extras";
 import ExtraView from "./views/ExtraView";
-import Home from "./routes/home";
+import ProfileUser from "./routes/profile/ProfileUser";
 
 const routes = [
   {
@@ -19,8 +19,8 @@ const routes = [
     ),
   },
   {
-    path: "index",
-    element: <Home />,
+    path: "my-profile",
+    element: <ProfileUser />,
   },
 ];
 extras.forEach((extra) => {
