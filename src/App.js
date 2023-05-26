@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState } from "react";
-import Home from "./routes/home/home";
+import Home from "./routes/home/Home";
 import Login from "./routes/home/Login";
 import { FcGoogle } from "react-icons/fc";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
@@ -17,7 +17,8 @@ function App() {
 
   return (
     <div>
-      {user && <Home />};{!user && <Login />}
+      {user && <Home />}
+      {!user && <Login />}
     </div>
   );
 }

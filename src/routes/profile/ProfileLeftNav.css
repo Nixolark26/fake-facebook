@@ -1,0 +1,27 @@
+@media screen and (min-width: 1200px) {
+  .left-nav {
+    width: 3.5rem;
+    display: flex;
+    align-items: center;
+    padding-left: unset;
+  }
+
+  .left-nav__elements {
+    display: flex;
+    align-items: unset;
+    width: unset;
+    /* transition: all 0.1s; */
+  }
+
+  .left-nav__elements:hover {
+    width: unset;
+  }
+
+  .left-nav__elements span {
+    display: none;
+  }
+
+  .left-nav hr {
+    width: 2.5rem;
+  }
+}

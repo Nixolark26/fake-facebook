@@ -1,10 +1,31 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../utils/firebase";
 
 function HomeTopNav() {
+  const [user, loading] = useAuthState(auth);
+  function goToMyProfile() {
+    auth.signOut();
+    if ((window.location.href = "http://localhost:3000/my-profile")) {
+      return;
+    } else {
+      window.location.href = "http://localhost:3000/my-profile";
+    }
+  }
+
+  function goToHome() {
+    if ((window.location.href = "http://localhost:3000/")) {
+      return;
+    } else {
+      window.location.href = "http://localhost:3000/";
+    }
+  }
   return (
     <ul className="top-nav">
-      <li className="top-nav__elements logo">facebook</li>
+      <li onClick={goToHome} className="top-nav__elements logo">
+        facebook
+      </li>
       <div className="search-container">
         <li className="top-nav__elements">
           <i class="fa-solid fa-magnifying-glass"></i>
@@ -19,18 +40,10 @@ function HomeTopNav() {
         <li className="top-nav__elements">
           <i class="fa-solid fa-bell"></i>
         </li>
-        <Link
-          to={
-            window.location.protocol +
-            "//" +
-            window.location.host +
-            "my-profile"
-          }
-        >
-          <li className="top-nav__elements">
-            <i class="fa-solid fa-user"></i>
-          </li>
-        </Link>
+
+        <li onClick={goToMyProfile} className="top-nav__elements">
+          <img className="top-myprofile" src={user?.photoURL} />
+        </li>
       </div>
     </ul>
   );

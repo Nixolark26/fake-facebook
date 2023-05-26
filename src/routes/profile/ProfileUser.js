@@ -3,8 +3,9 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../utils/firebase";
 import HomeLeftNav from "../../navs/HomeLeftNav";
 import HomeTopNav from "../../navs/HomeTopNav";
-import ProfilePosts from "../home/posts/ProfilePosts";
+import ProfilePosts from "../profile/ProfilePosts";
 import "./ProfileUser.css";
+import "./ProfileLeftNav.css";
 
 function ProfileUser() {
   const [user, loading] = useAuthState(auth);

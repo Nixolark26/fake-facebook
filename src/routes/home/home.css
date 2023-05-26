@@ -34,12 +34,21 @@ header {
   padding: 10px;
 }
 
+.top-myprofile {
+  width: 27px;
+  height: 27px;
+  padding: 6px;
+  background: #f0f2f5;
+  border-radius: 50%;
+}
+
 .logo {
   color: #1877f2;
   background: unset;
   font-size: 2rem;
   font-weight: 750;
   padding-left: 1.5rem;
+  cursor: pointer;
 }
 
 .top-nav .fa-user {
@@ -101,7 +110,6 @@ header {
   justify-content: space-around;
   list-style-type: none;
   background: #fff;
-  background: greenyellow;
 }
 
 .left-nav__elements span {
@@ -113,6 +121,11 @@ header {
   /* background: #f0f2f5; */
   padding: 10px;
   border-radius: 50%;
+}
+.left-myprofile {
+  height: 20px;
+  width: 20px;
+  padding: 10px;
 }
 
 .left-nav__elements:hover {
@@ -293,7 +306,7 @@ header {
   }
 
   .left-nav {
-    background: #fff;
+    background: #ccc;
     width: calc(20vw - 1rem);
     display: flex;
     align-items: start;
