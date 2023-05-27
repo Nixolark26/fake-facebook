@@ -15,11 +15,12 @@ function App() {
     window.scrollTo(0, 0);
   };
 
+  if (loading) return <div>Loading...</div>;
+
   return (
     <div>
-      {/* {user && <Home />} */}
-      {/* {!user && <Login />} */}
-      <Login />
+      {user && <Home />}
+      {!user && <Login />}
     </div>
   );
 }

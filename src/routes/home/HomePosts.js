@@ -1,11 +1,16 @@
 import React from "react";
+import "./HomePosts.css";
+
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../../utils/firebase";
 
 function HomePosts() {
+  const [user, loading] = useAuthState(auth);
   return (
     <ul className="posts">
       <li className="add-post">
-        <div>
-          <i class="fa-solid fa-user"></i>
+        <div className="add-post-header">
+          <img className="add-post-photo" src={user?.photoURL} />
           <span className="add-post-input">What do you thinking, Nicolas?</span>
         </div>
         <div className="actions-add-post">

@@ -1,5 +1,4 @@
 body {
-  position: relative;
 }
 
 .profile {
@@ -35,8 +34,11 @@ body {
   position: absolute;
   top: calc(307px + 0.72rem);
   left: 50%;
+  width: 426px;
+  background: #888;
+  text-align: center;
   transform: translateX(-50%);
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 900;
 }
 

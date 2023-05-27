@@ -1,3 +1,4 @@
+import "./HomeRightNav.css";
 import React from "react";
 
 function HomeRightNav() {

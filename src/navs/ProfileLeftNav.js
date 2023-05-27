@@ -23,43 +23,40 @@ function HomeLeftNav() {
   }
 
   return (
-    <ul className="left-nav">
-      <li onClick={goToHome} className="left-nav__elements">
-        <i class="fa-solid fa-house"></i> <span>Home</span>
+    <ul className="profile-left-nav">
+      <li onClick={goToHome} className="profile-left-nav__elements">
+        <i class="fa-solid fa-house"></i>
       </li>
-      <li onClick={goToMyProfile} className="left-nav__elements">
-        <img className="left-myprofile" src={user?.photoURL} />
-        <span>My profile</span>
+      <li onClick={goToMyProfile} className="profile-left-nav__elements">
+        <img className="profile-left-myprofile" src={user?.photoURL} />
       </li>
       <hr />
-      <li className="left-nav__elements">
-        <i class="fa-brands fa-youtube"></i> <span>Watch</span>
+      <li className="profile-left-nav__elements">
+        <i class="fa-brands fa-youtube"></i>
       </li>
-      <li className="left-nav__elements">
-        <i class="fa-solid fa-user-group"></i> <span>Friends</span>
+      <li className="profile-left-nav__elements">
+        <i class="fa-solid fa-user-group"></i>
       </li>
-      <li className="left-nav__elements">
-        <i class="fa-solid fa-store"></i> <span>Store</span>
+      <li className="profile-left-nav__elements">
+        <i class="fa-solid fa-store"></i>
       </li>
-      <li className="left-nav__elements">
-        <i class="fa-solid fa-gamepad"></i> <span>Games</span>
+      <li className="profile-left-nav__elements">
+        <i class="fa-solid fa-gamepad"></i>
       </li>
-      <li className="left-nav__elements ">
+      <li className="profile-left-nav__elements ">
         <div className="all">
           <i class="fa-solid fa-ellipsis-vertical"></i>
           <i class="fa-solid fa-ellipsis-vertical"></i>
           <i class="fa-solid fa-ellipsis-vertical"></i>
         </div>
-        <span>See all</span>
       </li>
       <hr />
-      <li className="left-nav__elements">
-        <i class="fa-solid fa-users-line"></i> <span>See all Groups</span>
+      <li className="profile-left-nav__elements">
+        <i class="fa-solid fa-users-line"></i>
       </li>
       <hr />
-      <li className="left-nav__elements">
+      <li className="profile-left-nav__elements">
         <i class="fa-solid fa-paperclip"></i>
-        <span>See all shorcuts</span>
       </li>
     </ul>
   );

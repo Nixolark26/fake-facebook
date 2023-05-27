@@ -5,6 +5,7 @@ import HomeTopNav from "../../navs/HomeTopNav";
 import HomeLeftNav from "../../navs/HomeLeftNav";
 import HomeRightNav from "../../navs/HomeRightNav";
 import HomePosts from "./HomePosts";
+
 import "./home.css";
 
 function Home() {

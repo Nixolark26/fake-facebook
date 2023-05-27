@@ -14,7 +14,6 @@ const routes = [
     element: (
       <div>
         <App />
-        <Footer />
       </div>
     ),
   },

@@ -68,3 +68,24 @@
   justify-content: space-evenly;
   /* color: #999; */
 }
+
+@media screen and (max-width: 600px) {
+  .posts {
+    /* background-color: #000; */
+  }
+
+  .add-post {
+    width: calc(400px - 1rem);
+  }
+  .profile-post-element {
+    width: 400px;
+  }
+
+  .profile-post-header {
+    width: 400px;
+  }
+
+  .profile-post-actions {
+    width: 400px;
+  }
+}
