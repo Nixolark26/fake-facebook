@@ -17,8 +17,9 @@ function App() {
 
   return (
     <div>
-      {user && <Home />}
-      {!user && <Login />}
+      {/* {user && <Home />} */}
+      {/* {!user && <Login />} */}
+      <Login />
     </div>
   );
 }

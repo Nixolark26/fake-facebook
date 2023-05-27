@@ -10,12 +10,26 @@ function login() {
   const googleProvider = new GoogleAuthProvider();
   const GoogleLogin = async (event) => {
     event.preventDefault();
+    let result;
     try {
-      const result = await signInWithPopup(auth, googleProvider);
+      result = await signInWithPopup(auth, googleProvider);
       //   window.location.protocol + "//" + window.location.host;
+      console.log(result.user);
     } catch (error) {
       console.log(error);
     }
+    fetch("http://localhost:5000/users", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: result.user.displayName,
+        googleId: result.user.reloadUserInfo.localId,
+        creationTime: result.user.metadata.creationTime,
+        lastSignInTime: result.user.metadata.lastSignInTime,
+        photoURL: result.user.photoURL,
+        // "https://i.pinimg.com/originals/f1/0f/f7/f10ff70a7155e5ab666bcdd1b45b726d.jpg",
+      }),
+    });
   };
 
   return (
