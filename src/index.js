@@ -11,11 +11,7 @@ import ProfileUser from "./routes/profile/ProfileUser";
 const routes = [
   {
     path: "/",
-    element: (
-      <div>
-        <App />
-      </div>
-    ),
+    element: <App />,
   },
   {
     path: "my-profile",

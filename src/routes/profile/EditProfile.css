@@ -27,17 +27,19 @@
   box-shadow: 1px 1px 10px #000;
 }
 
+.edit-profile-form span {
+  padding: 10px;
+  font-size: 1.1rem;
+  /* background-color: #f0f2f5; */
+}
+
 .edit-profile-form input {
   width: 35vw;
   padding: 10px;
   font-size: 1.1rem;
-  font-weight: 550;
-  border-radius: 6px;
-  /* background: #42b72a; */
-  color: #fff;
+  background-color: #f0f2f5;
   border: none;
-  border-bottom: 1px solid #000;
-  outline: 1px solid #000;
+  border-left: 2px solid #000;
 }
 
 .edit-profile-form button {
@@ -48,4 +50,40 @@
   background: #42b72a;
   color: #fff;
   border: none;
+}
+
+.more-logout-container {
+  position: absolute;
+  z-index: 100;
+  right: 2rem;
+  top: 54px;
+  width: 300px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 1rem;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.more-logout-container span {
+  background: #f0f2f5;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.logout-button {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f00;
+  text-align: center;
+}
+
+.logout-button:hover {
+  background: #f00;
+  color: #fff;
 }

@@ -54,6 +54,6 @@
 @media screen and (min-height: 640px) {
   .right-nav {
     height: calc(649px - 56px);
-    background-color: rgb(52, 154, 154);
+    /* background-color: rgb(52, 154, 154); */
   }
 }

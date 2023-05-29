@@ -35,19 +35,19 @@ function ProfileUser() {
         <div className="edit-profile-container">
           <div className="edit-profile-form-container">
             <form className="edit-profile-form">
-              <span>Username:</span>
+              <span>Username</span>
               <input type="text" placeholder="Enter new username" />
-              <span>Photo:</span>
-              <input type="text" placeholder="Enter new password" />
+              <span>Photo</span>
+              <input type="text" placeholder="Enter URL for new photo" />
               <button onClick={acceptChanges}>Accept</button>
             </form>
           </div>
         </div>
       )}
       <HomeTopNav />
-      <ProfileLeftNav />
       {user && (
-        <div>
+        <div className="profile-container">
+          <ProfileLeftNav />
           <section className="profile">
             <img
               className="profile-background"

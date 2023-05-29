@@ -6,13 +6,20 @@ import "./HomeTopNav.css";
 
 function HomeTopNav() {
   const [user, loading] = useAuthState(auth);
-  function goToMyProfile() {
+  const [show, setShow] = useState(false);
+  const [showMore, setShowMore] = useState(false);
+  // function goToMyProfile() {
+  //   if ((window.location.href = "http://localhost:3000/my-profile")) {
+  //     return;
+  //   } else {
+  //     window.location.href = "http://localhost:3000/my-profile";
+  //   }
+  // }
+  const profileContainer = document.querySelector(".profile-container");
+  console.log(profileContainer);
+
+  function logout() {
     auth.signOut();
-    if ((window.location.href = "http://localhost:3000/my-profile")) {
-      return;
-    } else {
-      window.location.href = "http://localhost:3000/my-profile";
-    }
   }
 
   function goToHome() {
@@ -22,7 +29,6 @@ function HomeTopNav() {
       window.location.href = "http://localhost:3000/";
     }
   }
-  const [show, setShow] = useState(false);
   function search(e) {
     let searchContainer = document.querySelector(".search-container");
     e.preventDefault();
@@ -32,6 +38,33 @@ function HomeTopNav() {
     } else {
       searchContainer.style.width = "unset";
     }
+  }
+
+  if (showMore) {
+    setTimeout(() => {
+      const moreLogoutContainer = document.querySelector(
+        ".more-logout-container"
+      );
+      moreLogoutContainer.addEventListener("mouseleave", () => {
+        // alert();
+
+        window.addEventListener("click", () => {
+          if (!showMore) {
+            return;
+          } else {
+            setShowMore(!showMore);
+            // console.log("window" + showMore);
+          }
+        });
+      });
+    }, 100);
+  }
+
+  function seeMore() {
+    setTimeout(() => {
+      if (!showMore) setShowMore(!showMore);
+      // console.log("button" + showMore);
+    }, 100);
   }
   return (
     <ul className="top-nav">
@@ -53,9 +86,21 @@ function HomeTopNav() {
         <li className="top-nav__elements">
           <i class="fa-solid fa-bell"></i>
         </li>
-        <li onClick={goToMyProfile} className="top-nav__elements">
+        <li onClick={seeMore} className="top-nav__elements">
           <img className="top-myprofile" src={user?.photoURL} />
         </li>
+        {showMore && (
+          <div className="more-logout-container">
+            <span>{user?.displayName}</span>
+
+            <br></br>
+            <div className="logout-container">
+              <span className="logout-button" onClick={logout}>
+                Logout
+              </span>
+            </div>
+          </div>
+        )}
       </div>
     </ul>
   );
